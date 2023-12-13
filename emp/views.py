@@ -16,9 +16,6 @@ from rest_framework.permissions import IsAuthenticated
 class EmpList(APIView):
 
     def get(self,request):
-       
-        if request.method=='GET':
-
             emp=Employee.objects.all()
             serializer=EmpSerializer(emp,many=True)
 
